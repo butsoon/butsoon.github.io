@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fzf天气</title>
+    <style>
+        body {
+
+                background-image: url('bg.jpg');
+
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh;
+            margin: 0;
+        }
+        h1 {
+            color: mediumblue;
+            text-shadow: 5px 5px 5px #FFA500;
+        }
+        </style>
+</head>
+<body>
+    <h1 style="color: mediumblue">实时天气预报</h1>
+    <input type="text" id="cityInput" placeholder="输入城市名称">
+    <button onclick="getWeatherData()">获取天气</button>
+    <div id="weatherData"></div>
+    <script>
+        function getWeatherData() {
+            const city = document.getElementById('cityInput').value;
+            const apiKey = '0962ef8d301407badb706ac05d8bc3e4'; // 替换为你的API密钥
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const weatherDataDiv = document.getElementById('weatherData');
+                    weatherDataDiv.innerHTML = `
+                        <h2 style="color: darkgreen">${data.name} 的天气</h2>
+                         <b><p style="color: #F08080">温度：${(data.main.temp - 273.15).toFixed(2)} °C</p></b>
+                         <p style="color: #FFA500">天气：${data.weather[0].description}</>
+                    `;
+                })
+                .catch(error => {
+                    console.error('Error fetching weather data:', error);
+                    const weatherDataDiv = document.getElementById('weatherData');
+                    weatherDataDiv.innerHTML = `<p style="color: red">未找到名为 ${city} 的城市的天气信息。</p>`;
+                });
+        }
+    </script>
+    <i><i><h6 style="color: cadetblue">请输入城市英文名称</h6></i></i>
+</body>
+</html>
+
