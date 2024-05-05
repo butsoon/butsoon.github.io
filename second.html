@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grow</title>
+    <style>
+        body {
+            background-color: #e987a0; /* 设置背景颜色 */
+            font-family: Arial, sans-serif; /* 设置字体 */
+            color: white; /* 设置文字颜色为白色 */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex; /* 使用 flex 布局 */
+            align-items: center; /* 垂直居中对齐 */
+            position: relative; /* 添加相对定位 */
+        }
+
+        .text {
+            margin-right: 20px; /* 可选：文字与图片之间的间距 */
+            animation: slideInLeft 1s forwards; /* 应用动画效果 */
+            opacity: 0; /* 初始时设置透明度为 0 */
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%); /* 初始位置在屏幕左侧外 */
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0); /* 最终位置在屏幕内 */
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        a {
+            color: white; /* 设置链接颜色为白色 */
+            text-decoration: none; /* 去掉链接下划线 */
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline; /* 鼠标悬停时显示下划线 */
+        }
+
+        .button-container {
+            position: fixed; /* 固定定位 */
+            bottom: 20px; /* 距离底部 20px */
+            right: 20px; /* 距离右侧 20px */
+        }
+
+        .button {
+            background-color: #123A75;
+            border: none;
+            color: #96d2d2;
+            padding: 10px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="text">
+        <p>我愿意为你进步和改变 也是你让我有了方向</p>
+        <h3>終於在我的不懈努力下超過了你</h3>
+        <h4>接下來我們仍要共同奮鬥頂峰相見</h4>
+    </div>
+    <img src="/butsoon.github.io-main/webphotos/fen.jpg" alt="成绩图片" width="300" height="650">
+    <div class="button-container">
+        <a href="\butsoon.github.io-main\third.html" class="button">下一页</a>
+    </div>
+</div>
+</body>
+</html>

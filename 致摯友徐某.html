@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--@Glamdor 黄芥末-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>♥致摯友徐某♥</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #edbdc9; /* 添加整个屏幕的纯色背景 */
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5); /* 降低背景透明度 */
+            z-index: -1; /* 确保覆盖在其他内容下方 */
+        }
+
+        table {
+            width: 500px;
+            border: 0;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
+
+        td.menu {
+            background-color: #dacee4;
+            width: 100px;
+            text-align: center;
+        }
+
+        td.content {
+            background-color: #f3e6ca;
+            height: 200px;
+            width: 400px;
+            text-align: center;
+        }
+
+        td.footer {
+            background-color: #638c70;
+            text-align: center;
+            color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #e85575; /* 修改按钮颜色 */
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #f06948;
+        }
+    </style>
+</head>
+<body>
+<div class="overlay"></div> <!-- 添加纯色背景的覆盖层 -->
+<table>
+    <tr>
+        <td colspan="2" style="background-color:#6e57a3;">
+            <h1><i>FOR 徐祎雯</i></h1>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="content">
+            <h3 style="color: #638c70">
+                <i>
+            我的挚友徐祎雯 我们分分合合也有两年了
+            <p>有喜有樂 有悲有無誤 我也一直在盡量的改變</p>
+            <p>為了紀念我們這十分珍貴的友誼</p>
+            <p>我寫了這個網站</p>
+            <p>給你 給我 給我們</p>
+                </i>
+            </h3>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" class="footer" >
+            <!-- 将按钮移动到下方左侧 -->
+            <strong>
+                <button onclick="window.location.href='second.html'">When you love someone.You may grow</button>
+            </strong>
+        </td>
+    </tr>
+
+    <!-- 新增的行，放置空白内容，用于调整按钮位置 -->
+    <tr>
+        <td colspan="2"></td>
+    </tr>
+</table>
+</body>
+</html>
